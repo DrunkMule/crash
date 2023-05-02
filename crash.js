@@ -41,7 +41,7 @@ function increaseMultiplier() {
     var betAmount = parseFloat(document.getElementById("bet-input").value);
     var winnings = multiplier * betAmount;
     document.getElementById("balance-amount").innerHTML = balance.toFixed(2);
-    alert("Oh no! The game crashed at " + multiplier.toFixed(1) + "x and you lost $" + betAmount.toFixed(2) + ".");
+    alert("AHAHAHAH! Spillet crashede ved " + multiplier.toFixed(1) + "x og du tabte $" + betAmount.toFixed(2) + ".");
     resetGame();
   }
 }
@@ -55,7 +55,7 @@ document.getElementById("cashout").addEventListener("click", function() {
   balance += winnings;
 
   // Display the winnings to the player
-  alert("Congratulations! You cashed out at " + multiplier.toFixed(1) + "x and won $" + winnings.toFixed(2) + ".");
+  alert("Tillykke! Du cashed ud på " + multiplier.toFixed(1) + "x og vandt $" + winnings.toFixed(2) + ".");
 
   // Reset the game
   resetGame();
