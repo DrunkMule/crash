@@ -29,14 +29,14 @@ document.getElementById("start").addEventListener("click", function() {
 
 // Function to increase the multiplier over time
 function increaseMultiplier() {
-  multiplier *= 1.11234599883;
+  multiplier *= 1.079883;
   document.getElementById("multiplier").innerHTML = multiplier.toFixed(3) + "x";
 
   // Set a timer to call this function again in 1 second
   timer = setTimeout(increaseMultiplier, 1000);
 
   // Randomly crash the game
-  if (Math.random() < 0.058398999789453 && multiplier < 99999999999999999999999999999.0) {
+  if (Math.random() < 0.1348398999789453 && multiplier < 99999999999999999999999999999.0) {
     clearTimeout(timer);
     var betAmount = parseFloat(document.getElementById("bet-input").value);
     var winnings = multiplier * betAmount;
