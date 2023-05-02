@@ -29,7 +29,7 @@ document.getElementById("start").addEventListener("click", function() {
 
 // Function to increase the multiplier over time
 function increaseMultiplier() {
-  multiplier *= 1.079883;
+  multiplier *= 1.11234599883;
   document.getElementById("multiplier").innerHTML = multiplier.toFixed(3) + "x";
 
   // Set a timer to call this function again in 1 second
