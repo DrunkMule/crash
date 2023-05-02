@@ -30,18 +30,18 @@ document.getElementById("start").addEventListener("click", function() {
 // Function to increase the multiplier over time
 function increaseMultiplier() {
   multiplier *= 1.079883;
-  document.getElementById("multiplier").innerHTML = multiplier.toFixed(1) + "x";
+  document.getElementById("multiplier").innerHTML = multiplier.toFixed(3) + "x";
 
   // Set a timer to call this function again in 1 second
   timer = setTimeout(increaseMultiplier, 1000);
 
   // Randomly crash the game
-  if (Math.random() < 0.058398999789453 && multiplier < 100.00) {
+  if (Math.random() < 0.108398999789453 && multiplier < 10000000.00) {
     clearTimeout(timer);
     var betAmount = parseFloat(document.getElementById("bet-input").value);
     var winnings = multiplier * betAmount;
     document.getElementById("balance-amount").innerHTML = balance.toFixed(2);
-    alert("AHAHAHAH! Spillet crashede ved " + multiplier.toFixed(1) + "x og du tabte $" + betAmount.toFixed(2) + ".");
+    alert("AHAHAHAH! Spillet crashede ved " + multiplier.toFixed(3) + "x og du tabte $" + betAmount.toFixed(2) + ".");
     resetGame();
   }
 }
@@ -55,7 +55,7 @@ document.getElementById("cashout").addEventListener("click", function() {
   balance += winnings;
 
   // Display the winnings to the player
-  alert("Tillykke! Du cashed ud på " + multiplier.toFixed(1) + "x og vandt $" + winnings.toFixed(2) + ".");
+  alert("Tillykke! Du cashed ud på " + multiplier.toFixed(3) + "x og vandt $" + winnings.toFixed(2) + ".");
 
   // Reset the game
   resetGame();
@@ -71,7 +71,7 @@ function resetGame() {
 
   // Reset the multiplier and update the display
   multiplier = 1;
-  document.getElementById("multiplier").innerHTML = multiplier.toFixed(1) + "x";
+  document.getElementById("multiplier").innerHTML = multiplier.toFixed(3) + "x";
 
   // Reset the bet input field
   document.getElementById("bet-input").value = 1;
