@@ -9,7 +9,7 @@ document.getElementById("start").addEventListener("click", function() {
 
   // Check if the bet amount is greater than the player's balance
   if (betAmount > balance) {
-    alert("You don't have enough balance to place this bet.");
+    alert("Du har ikke råd, lol.");
     return;
   }
 
