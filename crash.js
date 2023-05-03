@@ -36,7 +36,7 @@ function increaseMultiplier() {
   timer = setTimeout(increaseMultiplier, 1000);
 
   // Randomly crash the game
-  if (Math.random() < 0.1348398999789453 && multiplier < 99999999999999999999999999999.0) {
+  if (Math.random() < 0.081348398999789453 && multiplier < 99999999999999999999999999999.0) {
     clearTimeout(timer);
     var betAmount = parseFloat(document.getElementById("bet-input").value);
     var winnings = multiplier * betAmount;
